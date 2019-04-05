@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'GoodDog Plain';
+  src: url("https://dl.dropboxusercontent.com/s/0ui52opk4ko9d29/GOODDP__.TTF?dl=0")
+}
+
+@media(max-height: 326px) {
+  .foot {
+    display: block !important;
+    font-family: "GoodDog Plain";
+    font-size: 25px;
+    text-align: right;
+    padding-right: 20px;
+    bottom: 50px;
+    width: 180px !important;
+    float: left !important;
+    position: relative !important;
+  }
+
+  .switch {
+    float: right !important;
+  }
+
+  #tttBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+  }
+}
+
+.row {
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.outer {
+  position: relative;
+  margin: 2px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  float: none;
+}
+
+.card {
+  background-color: #aaf;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 1.0s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 1.0s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card:hover {
+  background-color: #c3c3ff;
+}
+
+.outer.active .card {
+  color: #aaa;
+  overflow: inherit;
+  -webkit-transform: rotateY(540deg);
+  transform: rotateY(540deg);
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.back {
+  display: block;
+  color: white;
+  text-align: center;
+  background-color: #aaa;
+  -webkit-transform: rotateY(540deg);
+  transform: rotateY(540deg);
+}
+
+.o div {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.o-border .face {
+  border: 13px solid #aaa;
+  background-color: white;
+}
+
+.x div {
+  clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+  -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+  overflow: hidden;
+}
+
+.foot {
+  font-family: "GoodDog Plain";
+  position: fixed;
+  left: 0px;
+  bottom: 50px;
+  height: 30px;
+  width: 100%;
+  font-size: 25px;
+}
+
+.vert {
+  margin: auto;
+  width: 30px;
+  height: 34px;
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+  display: none;
+}
+
+
+/* The slider */
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #aaf;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+  -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+  overflow: hidden;
+}
+
+input:checked + .slider {
+  background-color: #aaa;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  clip-path: none;
+  -webkit-clip-path: none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border: 5px solid white;
+  background-color: #aaa;
+}
